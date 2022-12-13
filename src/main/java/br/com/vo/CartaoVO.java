@@ -2,7 +2,6 @@ package br.com.vo;
 
 import java.io.Serializable;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
@@ -19,8 +18,6 @@ public class CartaoVO implements Serializable {
 	private String numeroCartao;
 	@JsonProperty("senha")
 	private String senha;
-	@JsonIgnore
-	private boolean success;
 
 	public String getNumeroCartao() {
 		return numeroCartao;
@@ -36,14 +33,6 @@ public class CartaoVO implements Serializable {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
-	}
-
-	public boolean isSuccess() {
-		return success;
-	}
-
-	public void setSuccess(boolean success) {
-		this.success = success;
 	}
 
 	public static Cartao getModel(CartaoVO vo) {
